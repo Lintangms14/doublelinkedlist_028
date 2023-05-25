@@ -41,7 +41,7 @@ void DuobleLinkedList::addnode() {
 	node* newnode = new node();
 	newnode->noMhs = nim;
 	newnode->name = nm;
-	
+
 	if (START == NULL || nim <= START->noMhs) {
 		if (START != NULL && nim == START->noMhs) {
 			cout << "\nDuplicate number not allowed" << endl;
@@ -57,4 +57,11 @@ void DuobleLinkedList::addnode() {
 	node* current = START;
 	while (current->next != NULL && nim > current->next->noMhs)
 		current = current->next;
+
+	if (current->next != NULL && nim == current->next->noMhs) {
+		cout << "\nDuplicate roll number not allowed" << endl;
+		return;
+	}
+
+	
 }
