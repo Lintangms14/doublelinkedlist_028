@@ -47,7 +47,12 @@ void DuobleLinkedList::addnode() {
 			cout << "\nDuplicate number not allowed" << endl;
 			return;
 		}
-		
+		newnode->next = START;
+		if (START != NULL)
+			START->prev = newnode;
+		newnode->prev = NULL;
+		START = newnode;
+		return;
 	}
 
 }
