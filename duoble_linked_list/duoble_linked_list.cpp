@@ -63,5 +63,9 @@ void DuobleLinkedList::addnode() {
 		return;
 	}
 
-	
+	newnode->next = current->next;
+	newnode->prev = current;
+	if (current->next != NULL)
+		current->next->prev = newnode;
+	current->next = newnode;
 }
