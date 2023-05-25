@@ -54,5 +54,7 @@ void DuobleLinkedList::addnode() {
 		START = newnode;
 		return;
 	}
-
+	node* current = START;
+	while (current->next != NULL && nim > current->next->noMhs)
+		current = current->next;
 }
