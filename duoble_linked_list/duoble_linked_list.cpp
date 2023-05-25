@@ -114,7 +114,7 @@ void DuobleLinkedList::ascending() {
 }
 
 void DuobleLinkedList::descending() {
-	if ((listempty))
+	if (listempty())
 		cout << "\nList is empty" << endl;
 	else {
 		cout << "\nRecords in descending order of roll number are:" << endl;
@@ -127,4 +127,11 @@ void DuobleLinkedList::descending() {
 			currentnode = currentnode->prev;
 		}
 	}
+}
+
+void DuobleLinkedList::hapus() {
+	if (listempty())
+		cout << "\List is empty" << endl;
+
+
 }
