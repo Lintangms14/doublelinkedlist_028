@@ -69,3 +69,12 @@ void DuobleLinkedList::addnode() {
 		current->next->prev = newnode;
 	current->next = newnode;
 }
+
+bool DuobleLinkedList::search(int rollNo, node** previous, node** current) {
+	*previous = *current = START;
+	while (*current != NULL && rollNo != (*current)->noMhs) {
+		*previous = *current;
+		*current = (*current)->next;
+	}
+	return (*current != NULL);
+}
