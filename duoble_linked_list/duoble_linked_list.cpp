@@ -5,7 +5,7 @@ using namespace std;
 class node {
 public:
 	int noMhs;
-	string nama;
+	string name;
 	node* next;
 	node* prev;
 };
@@ -30,3 +30,24 @@ DuobleLinkedList::DuobleLinkedList() {
 	START = NULL;
 }
 
+void DuobleLinkedList::addnode() {
+	int nim;
+	string nm;
+	cout << "\nEnter the roll number of the student: ";
+	cin >> nim;
+	cout << "\nEnter the name of the student: ";
+	cin.ignore();
+	getline(cin, nm);
+	node* newnode = new node();
+	newnode->noMhs = nim;
+	newnode->name = nm;
+	
+	if (START == NULL || nim <= START->noMhs) {
+		if (START != NULL && nim == START->noMhs) {
+			cout << "\nDuplicate number not allowed" << endl;
+			return;
+		}
+		
+	}
+
+}
