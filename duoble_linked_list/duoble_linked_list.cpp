@@ -112,3 +112,19 @@ void DuobleLinkedList::ascending() {
 		}
 	}
 }
+
+void DuobleLinkedList::descending() {
+	if ((listempty))
+		cout << "\nList is empty" << endl;
+	else {
+		cout << "\nRecords in descending order of roll number are:" << endl;
+		node* currentnode = START;
+		while (currentnode->next != NULL)
+			currentnode = currentnode->next;
+
+		while (currentnode != NULL) {
+			cout << currentnode->noMhs << " " << currentnode->name << endl;
+			currentnode = currentnode->prev;
+		}
+	}
+}
